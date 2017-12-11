@@ -1,17 +1,8 @@
 // Update with your config settings.
-const path = require('path');
 module.exports = {
   development: {
     client: 'pg',
-    connection: {
-      filename: 'postgres://localhost/general_store_db'
-    },
-    migrations: {
-      directory: path.join(__dirname, 'migrations')
-    },
-    seeds: {
-      directory: path.join(__dirname, 'seeds', 'dev')
-    }
+    connection: 'postgres://localhost/general_store_db'
   },
 
   production: {

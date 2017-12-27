@@ -4,7 +4,7 @@ import { Nuxt, Builder } from 'nuxt';
 import api from './api';
 
 const app = express();
-const host = process.env.HOST || '0.0.0.0';
+const host = process.env.HOST || '172.17.0.2';
 const port = process.env.PORT || 3000;
 
 app.set('port', port);

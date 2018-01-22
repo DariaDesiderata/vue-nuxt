@@ -2,18 +2,11 @@
   <section class="container">
     <main class="landing">
       <div class="landing-inner">
-        <ul class="menu">
-          <li><nuxt-link to="/projects">Projects</nuxt-link></li>
-          <li> / <li>
-          <li><nuxt-link to="/links">Links </nuxt-link></li>
-          <li> / <li>
-          <li><nuxt-link to="/about">About me </nuxt-link></li>
-        </ul>
+        <top-nav/>
         <div class="star">
           <h1 class="title">DC</h1>
-          <p class="title-small">React developer</p>
+          <p class="title-small">Web UI developer</p>
         </div>
-
       </div>
     </main>
     <!-- <h1 class="title">
@@ -31,8 +24,12 @@
 
 <script>
 import axios from '~/plugins/axios';
+import TopNav from '~/components/Nav.vue';
 
 export default {
+  components: {
+    TopNav
+  },
   async asyncData() {
     let { data } = await axios.get('/api/users');
     return { users: data };
@@ -46,13 +43,8 @@ export default {
 </script>
 
 <style scoped>
-.landing-inner {
-  position: relative;
-  height: calc(100vh - 40px);
-  margin: 20px;
-  border: 4px double hsla(360, 100%, 100%, 1);
-}
 .star{
+  border-radius: 7px;
   position: relative;
   opacity: 0.6;
   top: 20%;
@@ -62,10 +54,11 @@ export default {
   border: 4px double hsla(360, 100%, 100%, 1);
 }
 .star::before {
+  border-radius: 7px;
 	content: " ";
 	width: 300px;
 	height: 300px;
-  background-color: hsla(360, 100%, 100%, 1);
+  background-color: hsla(339, 57%, 94%, 0.5);
   opacity: 1;
 	transform:rotate(45deg);
 	position: absolute;
@@ -78,26 +71,12 @@ export default {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  color: hsla(314, 42%, 11%, 1)
 }
 .title-small {
   position: relative;
   top: 25%;
   transform: translateY(-25%);
-}
-.menu {
-  list-style: none;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-li, a{
-  font-size: 25px;
-  margin: 5px 10px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: hsla(329, 100%, 45%, 1);
 }
 .users
 {

@@ -20,6 +20,14 @@ a:focus,
 a:visited {
   color: #000;
 }
+.landing {
+  background: url('../BW_abstract.jpg') no-repeat center center fixed;
+  background-size: 100%;
+  opacity: 0.6;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
 
 .logo {
   width: 100%;

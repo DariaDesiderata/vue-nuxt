@@ -1,34 +1,30 @@
 html,
 body {
   background-color: #fff;
-  color: #000;
+  color: hsla(230, 10%, 12%, 1);
   letter-spacing: 0.5px;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-family: 'Halant', Arial, sans-serif;
   height: 100vh;
   margin: 0;
 }
-
 footer {
   padding: 20px;
   text-align: center;
   border-top: 1px solid #ddd;
 }
-
-a,
-a:hover,
-a:focus,
-a:visited {
-  color: #000;
-}
 .landing {
-  background: url('../BW_abstract.jpg') no-repeat center center fixed;
+  background: url('../bw_bench.jpg') no-repeat center center fixed;
   background-size: 100%;
-  opacity: 0.6;
   height: 100vh;
   width: 100vw;
   position: fixed;
 }
-
+.landing-inner {
+  position: relative;
+  height: calc(100vh - 60px);
+  margin: 25px;
+  border: 4px dotted hsla(339, 6%, 46%, 0.3);
+}
 .logo {
   width: 100%;
   height: auto;

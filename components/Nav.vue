@@ -1,0 +1,31 @@
+<template>
+  <ul class="menu">
+    <li><nuxt-link to="/">Main</nuxt-link></li>
+    <li> / <li>
+    <li><nuxt-link to="/projects">Projects</nuxt-link></li>
+    <li> / <li>
+    <li><nuxt-link to="/links">Links </nuxt-link></li>
+    <li> / <li>
+    <li><nuxt-link to="/about">About me </nuxt-link></li>
+  </ul>
+</template>
+
+<style scoped>
+.menu {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+li, a {
+  font-size: 25px;
+  margin: 5px 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  color: hsla(230, 10%, 12%, .7);
+}
+
+a:hover {
+  color: hsla(308, 52%, 59%, 1);
+}
+</style>

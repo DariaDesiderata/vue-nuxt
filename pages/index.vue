@@ -51,7 +51,7 @@ export default {
   left: 40%;
 	width: 300px;
 	height: 300px;
-  border: 4px double hsla(360, 100%, 100%, 1);
+  border: 4px double hsla(230, 10%, 12%, .5);
 }
 .star::before {
   border-radius: 7px;
@@ -64,7 +64,7 @@ export default {
 	position: absolute;
   	top:0px;
   	left:0px;
-  	border: 4px double hsla(360, 100%, 100%, 1);
+  	border: 4px double hsla(230, 10%, 12%, .5);
 }
 .title {
   font-size: 100px;

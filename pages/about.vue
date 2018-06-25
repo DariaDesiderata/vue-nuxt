@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 .landing {
-  background: url('../assets/bw_rocks.jpg') no-repeat center center fixed;
+  background: url('../static/assets/about_me.jpg') no-repeat center center fixed;
   background-size: 100%;
 }
 .about {

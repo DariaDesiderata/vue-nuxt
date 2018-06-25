@@ -19,7 +19,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/main.css', '@/assets/css/main.scss'],
+  css: ['./static/assets/css/main.css', './static/assets/css/main.scss'],
   /*
   ** Loading
   */

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Halant:300');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Alegreya+Sans:300');
 .component-fade-enter-active,
 .component-fade-leave-active {
   transition: opacity 0.5s;
@@ -6,4 +6,37 @@
 .component-fade-enter,
 .component-fade-leave-to {
   opacity: 0;
+}
+html,
+body {
+  background-color: #fff;
+  color: hsla(230, 10%, 12%, 0.8);
+  letter-spacing: 0.5px;
+  font-family: 'Julius Sans One', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+.landing {
+  background: url('../bw_bench.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+.landing-inner {
+  position: relative;
+  height: calc(100vh - 60px);
+  margin: 25px;
+  border: 4px dotted hsla(339, 6%, 46%, 0.3);
+}
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 289px;
 }

@@ -1,5 +1,5 @@
 <template>
-  <ul class="menu">
+  <ul class="mainNav">
     <li><nuxt-link to="/">Main</nuxt-link></li>
     <li> / <li>
     <li><nuxt-link to="/projects">Projects</nuxt-link></li>
@@ -11,14 +11,14 @@
 </template>
 
 <style scoped>
-.menu {
+.mainNav {
   list-style: none;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 li, a {
-  font-size: 25px;
+  font-size: 20px;
   margin: 5px 10px;
   transition: color 0.3s ease;
   text-decoration: none;

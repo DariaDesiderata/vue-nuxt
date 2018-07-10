@@ -2,23 +2,22 @@
   <main>
     <div class="landing-inner">
     <top-nav class="nav"/>
-    <section class="section">
-  		<div class="section__content">
-  			<h3 class="section__title">{{ project1.title }}</h3>
+    <section v-for="project in projects"  v-if='project.id === currentProject.id' class="section">
+  		<div  class="section__content">
+  			<h3 class="section__title">{{ project.title }}</h3>
   			<h5 class="section__description">
-        {{ project1.description }}
+        {{ project.description }}
         </h5>
         <p class='section__description-text'>
-        {{ project1.descriptionBody }}
+        {{ project.descriptionBody }}
         </p>
-
   		</div>
   		<div class="section__img">
-  			<img :src="project1.imgUrl" class="section__img-inner"></img>
+  			<img :src="project.imgUrl" class="section__img-inner"></img>
   		</div>
   		<div class="section__more">
-  				<a :href="project1.projectUrl" class="section__more-link">Explore on Github</a>
-          <button class="section__more-button">See next</button>
+  				<a :href="project.projectUrl" class="section__more-link">Explore on Github</a>
+          <button @click="showNext(project)" class="section__more-button">See next</button>
   		</div>
   		</section>
     </div>
@@ -27,50 +26,29 @@
 
 <script>
 import TopNav from '~/components/Nav.vue';
-
+import projects from '~/common/projects';
 export default {
   components: {
     TopNav
   },
+
   data() {
     return {
-      project1: {
-        title: 'Wanderers',
-        description:
-          'Explore the Solar System in virtual reality and enjoy stunning hi-res images',
-        descriptionBody:
-          'Solo project created with Three.js, Css animations and Express server.\
-      Working on this project allowed me to learn various aspects of WebGL, manipulating objects\
-      on Canvas and mapping data to visual display of objects.',
-        imgUrl: './assets/Wanderers2.png',
-        projectUrl: 'https://github.com/DariaDesiderata/wanderers'
-      },
-      project2: {
-        title: 'E-Commerse',
-        description:
-          'Online shopping experience for users shopping across multiple stores with inventory split into different categories',
-        descriptionBody:
-          'As a UI developer on the Experiece Team at Baker Technologies I utilized React/Redux technologies to create a styled interfaced \
-          to provide online shoppers with various filtering, sorting and viewing options for the specific products at different stores across the US and Canada.\
-          Other tech used in the project are REST API, GraphQL/Apollo, Scss/Css/Keyframe animations, Webpack/Babel',
-        imgUrl: './assets/Baker_shop.png',
-        projectUrl: 'Private'
-      },
-      project3: {
-        title: '',
-        description: '',
-        descriptionBody: '',
-        imgUrl: '',
-        projectUrl: ''
-      },
-      project4: {
-        title: '',
-        description: '',
-        descriptionBody: '',
-        imgUrl: '',
-        projectUrl: ''
-      }
+      currentProject: projects[0],
+      projects: projects
     };
+  },
+  methods: {
+    showNext: function(currentProject) {
+      const index = this.$data.projects.findIndex(
+        project => project.id === currentProject.id
+      );
+      if (index < this.$data.projects.length - 1) {
+        this.$data.currentProject = projects[index + 1];
+      } else {
+        this.$data.currentProject = projects[0];
+      }
+    }
   }
 };
 </script>
@@ -78,36 +56,48 @@ export default {
 <style scoped>
 
 .section__title {
-	font-size: 6vw;
+	font-size: 45px;
 	margin: 0;
 	position: relative;
 }
 
 .section__description {
-	line-height: 1.75;
-  margin: 0 1.5em 0 0;
+  margin: 10px 0;
 	overflow: hidden;
 	position: relative;
-	padding: 0 2em 0 0;
 	font-weight: 300;
+  font-family: 'Alegreya Sans';
+  font-size: 20px;
+  background-color: hsla(0, 0%, 98%, 0.68);
 }
 
 .section__img {
-	height: 45vh;
+	/*width: 90%;*/
+  margin-left: 60px;
+	height: 90%;
+  box-shadow: 1px 5px 10px hsla(0, 0%, 48%, .5);
 }
 
-.section__img-inner {
-  filter: grayscale(50%);
-	width: 100%;
-	height: auto;
+.section__img img {
+  filter: grayscale(60%);
+  width: calc(120% + 60px);
+  height: 100%;
+  transition: transform 0.35s;
+	/*-webkit-transform: translate3d(-30px,0,0) scale(1.12);*/
+	transform: translate3d(-30px,0,0) scale(1.12);
+	/*-webkit-backface-visibility: hidden;*/
+	backface-visibility: hidden;
 }
-.section__img-inner:hover {
+.section__img:hover img{
   filter: none;
+	-webkit-transform: translate3d(0,0,0) scale(1);
+	transform: translate3d(0,0,0) scale(1);
 }
 .section__more {
+  font-family: 'Alegreya Sans';
   height: 30%;
   margin: 0 1em;
-  font-size: 1.3em;
+  font-size: 20px;
   justify-self: end;
   display: flex;
   justify-content: space-between;
@@ -115,7 +105,7 @@ export default {
 .section__more-link {
   margin: 0 1em;
   padding: 5px 10px;
-  background-color: hsla(339, 57%, 94%, 0.9);
+  background-color: hsla(13, 100%, 95%, 0.81);
   text-decoration: none;
 	cursor: pointer;
   color: inherit;
@@ -123,7 +113,7 @@ export default {
 }
 .section__more-button {
   padding: 5px 10px;
-  background-color: hsla(339, 57%, 94%, 0.9);
+  background-color: hsla(13, 100%, 95%, 0.81);
   border: none;
   text-decoration: none;
 	cursor: pointer;
@@ -147,27 +137,29 @@ export default {
     height: 100%;
 		grid-area: section;
 		display: grid;
-		grid-template-columns: 40% auto 40%;
+		grid-template-columns: 40%  55% auto;
 		grid-template-rows: 15% 15% 30% 20%;
 		grid-template-areas: 	". . ."
-                ". slide-image slide-image"
-								"slide-content slide-image slide-image"
-                ". slide-image slide-image"
-								". . more";
+                ".  slide-image ."
+								"slide-content  slide-image ."
+                "slide-content slide-image ."
+								". more .";
 	}
 	.section__content {
-		padding: 0 4em;
+		padding-left: 50px;
     width: 120%;
 		grid-area: slide-content;
     z-index: 50;
 	}
   .section__description-text {
-    background-color: hsla(339, 57%, 94%, 0.9);
-    padding: 10px;
+    font-family: 'Alegreya Sans';
+    line-height: 1.5em;
+    letter-spacing: 1.5px;
+    background-color: hsla(13, 100%, 95%, 0.81);
+    padding: 20px 0 20px 20px;
   }
 
 	.section__img {
-    padding: 0 1em;
     height: auto;
 		grid-area: slide-image;
 		overflow: hidden;

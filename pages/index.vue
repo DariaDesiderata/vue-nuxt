@@ -3,7 +3,7 @@
     <main class="landing">
       <div class="landing-inner">
         <top-nav/>
-        <div class="star">
+        <div class="title-section">
           <h1 class="title">DC</h1>
           <p class="title-small">Web UI developer</p>
         </div>
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import axios from '~/plugins/axios';
 import TopNav from '~/components/Nav.vue';
 
 export default {
@@ -34,7 +33,7 @@ export default {
 </script>
 
 <style scoped>
-.star{
+.title-section{
   border-radius: 7px;
   position: relative;
   opacity: 0.6;
@@ -44,7 +43,7 @@ export default {
 	height: 300px;
   border: 4px double hsla(230, 10%, 12%, .5);
 }
-.star::before {
+.title-section::before {
   border-radius: 7px;
 	content: " ";
 	width: 300px;

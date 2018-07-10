@@ -33,11 +33,10 @@ export default {
 <style scoped>
 .landing {
   background: url('../static/assets/about_me.jpg') no-repeat center center fixed;
-  background-size: 100%;
 }
 .about {
   margin: 50px auto;
-  width: calc(80% - 100px);
+  min-width: calc(80% - 100px);
   color: hsla(339, 6%, 46%, 0.93);
 }
 </style>

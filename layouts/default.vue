@@ -19,7 +19,7 @@
 .container
 {
   margin: 0;
-  width: 100%;
+  width: 100vw;
   text-align: center;
 }
 

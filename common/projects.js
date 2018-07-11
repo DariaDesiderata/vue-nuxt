@@ -8,7 +8,7 @@ const projects = [
       'Solo project created with Three.js, Css animations and Express server.\
 Working on this project allowed me to learn various aspects of WebGL, manipulating objects\
 on Canvas and mapping data to visual display of objects.',
-    imgUrl: './assets/Wanderers2.png',
+    imgUrl: './assets/wanderers_logo.png',
     projectUrl: 'https://github.com/DariaDesiderata/wanderers'
   },
   {
@@ -20,7 +20,7 @@ on Canvas and mapping data to visual display of objects.',
       'As a UI developer on the Experiece Team at Baker Technologies I utilized React/Redux technologies to create a styled interfaced \
     to provide online shoppers with various filtering, sorting and viewing options for the specific products at different stores across the US and Canada.\
     Other tech used in the project are REST API, GraphQL/Apollo, Scss/Css/Keyframe animations, Webpack/Babel',
-    imgUrl: './assets/Baker_shop.png',
+    imgUrl: './assets/baker_shop.png',
     projectUrl: 'https://app.trybaker.com/location'
   },
   {

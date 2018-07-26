@@ -32,7 +32,6 @@ export default {
   components: {
     TopNav
   },
-
   data() {
     return {
       currentProject: projects[0],

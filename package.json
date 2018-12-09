@@ -16,24 +16,28 @@
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
     "knex": "^0.14.2",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.11.0",
     "nuxt": "^1.0.0-rc3",
     "nuxt-vue-material": "0.0.6",
     "pg": "^7.4.0",
     "sass-loader": "^6.0.6",
-    "source-map-support": "^0.4.15",
+    "source-map-support": "^0.4.18",
     "vuetify": "^0.17.6"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "backpack-core": "^0.4.1",
+    "backpack-core": "^0.8.3",
     "eslint": "^4.3.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-html": "^3.1.1",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.7.1",
+    "prettier": "^1.15.3"
   }
 }

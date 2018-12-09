@@ -21,8 +21,7 @@
 </template>
 
 <script>
-import TopNav from '~/components/Nav.vue';
-
+import TopNav from "~/components/Nav.vue";
 export default {
   components: {
     TopNav
@@ -32,7 +31,7 @@ export default {
 
 <style scoped>
 .landing {
-  background: url('../static/assets/about_me.jpg') no-repeat center center fixed;
+  background: url("../static/assets/about_me.jpg") no-repeat center center fixed;
 }
 .about {
   margin: 50px auto;

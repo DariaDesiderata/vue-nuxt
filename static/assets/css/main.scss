@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Alegreya+Sans:300');
+@import url('./fonts.scss');
+
+$julius-sans: 'Julius sans', sans-serif;
+
 .component-fade-enter-active,
 .component-fade-leave-active {
   transition: opacity 0.5s;
@@ -12,7 +15,7 @@ body {
   background-color: #fff;
   color: hsla(230, 10%, 12%, 0.8);
   letter-spacing: 0.5px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: $julius-sans;
   height: 100vh;
   margin: 0;
 }

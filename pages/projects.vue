@@ -19,8 +19,9 @@
   		<div class="section__img">
   			<img :src="project.imgUrl" class="section__img-inner"/>
         <div class="section__more">
-    				<a :href="project.projectUrl" class="section__more-link">Explore on Github</a>
-            <button @click="showNext(project)" class="section__more-button">See next</button>
+            <button @click="showPrev(project)" class="section__more-button">Previous</button>
+    				<a :href="project.projectUrl" class="section__more-link">Explore</a>
+            <button @click="showNext(project)" class="section__more-button">Next</button>
     		</div>
   		</div>
       <div class="section__project_id">{{project.id}}</div>
@@ -30,30 +31,41 @@
   </template>
 
 <script>
-import TopNav from '~/components/Nav.vue';
-import projects from '~/common/projects';
+import TopNav from "~/components/Nav.vue";
+import projects from "~/common/projects";
 export default {
   components: {
-    TopNav,
+    TopNav
   },
   data() {
     return {
       currentProject: projects[0],
-      projects: projects,
+      projects: projects
     };
   },
   methods: {
-    showNext: function(currentProject) {
-      const index = this.projects.findIndex(
+    getIndex(currentProject) {
+      return this.projects.findIndex(
         project => project.id === currentProject.id
       );
+    },
+    showNext: function(currentProject) {
+      const index = this.getIndex(currentProject);
       if (index < this.projects.length - 1) {
         this.currentProject = projects[index + 1];
       } else {
         this.currentProject = projects[0];
       }
     },
-  },
+    showPrev: function(currentProject) {
+      const index = this.getIndex(currentProject);
+      if (index > 0) {
+        this.currentProject = projects[index - 1];
+      } else {
+        this.currentProject = projects[this.projects.length - 1];
+      }
+    }
+  }
 };
 </script>
 
@@ -69,7 +81,7 @@ export default {
   overflow: hidden;
   position: relative;
   font-weight: 300;
-  font-family: 'Alegreya Sans';
+  font-family: "Alegreya Sans";
   font-size: 20px;
   background-color: hsla(0, 0%, 98%, 0.68);
 }
@@ -111,7 +123,7 @@ export default {
   font-size: 70px;
 }
 .section__more {
-  font-family: 'Alegreya Sans';
+  font-family: "Alegreya Sans";
   height: 40px;
   margin: 0 1em;
   font-size: 20px;
@@ -139,12 +151,12 @@ export default {
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
   main {
-    background-image: url('../static/assets/bw_opacity10.jpg');
+    background-image: url("../static/assets/bw_opacity10.jpg");
     background-size: cover;
     height: 100vh;
     display: grid;
     grid-template-rows: 10% 90%;
-    grid-template-areas: 'header-nav' 'section';
+    grid-template-areas: "header-nav" "section";
   }
   .nav {
     grid-area: header-nav;
@@ -156,9 +168,9 @@ export default {
     grid-template-columns: 40% 10% 30% 10% 10%;
     grid-template-rows: 10% 25% 50% auto;
     grid-template-areas:
-      '. . . .'
-      '. slide-image slide-image slide-image'
-      'slide-content  slide-image slide-image slide-image';
+      ". . . ."
+      ". slide-image slide-image slide-image"
+      "slide-content  slide-image slide-image slide-image";
   }
   .section__content {
     padding-left: 50px;
@@ -167,7 +179,7 @@ export default {
     z-index: 50;
   }
   .section__description-text {
-    font-family: 'Alegreya Sans';
+    font-family: "Alegreya Sans";
     line-height: 1.5em;
     letter-spacing: 1.5px;
     background-color: hsla(13, 100%, 95%, 0.81);

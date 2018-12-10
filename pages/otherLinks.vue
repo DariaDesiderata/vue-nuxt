@@ -20,8 +20,8 @@ export default {
 
 <style scoped>
 .landing {
-  background: url("../static/assets/Background-1.png") no-repeat center center
-    fixed;
+  background: url("../static/assets/img/Background-1.png") no-repeat center
+    center fixed;
   background-size: 100%;
 }
 .about {

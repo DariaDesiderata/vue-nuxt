@@ -139,7 +139,7 @@ export default {
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
   main {
-    background: url("../static/assets/Stroke-5.png") no-repeat center center
+    background: url("../static/assets/img/Stroke-5.png") no-repeat center center
       fixed;
     background-size: 90%;
     height: 100vh;

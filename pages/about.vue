@@ -31,7 +31,8 @@ export default {
 
 <style scoped>
 .landing {
-  background: url("../static/assets/Stroke-7.png") no-repeat center center fixed;
+  background: url("../static/assets/img/Stroke-7.png") no-repeat center center
+    fixed;
   background-size: 90%;
 }
 .about {

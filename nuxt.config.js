@@ -1,52 +1,52 @@
 module.exports = {
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: 'Daria Calwell Portfolio',
+    title: "Daria Calwell Portfolio",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Daria Calwell | Web and UI developer'
+        hid: "description",
+        name: "description",
+        content: "Daria Calwell | Web and UI developer"
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   /*
-  ** Global CSS
-  */
-  css: ['./static/assets/css/main.scss', './static/assets/css/main.css'],
+   ** Global CSS
+   */
+  css: ["./static/assets/css/main.scss", "./static/assets/css/main.css"],
   /*
-  ** Loading
-  */
+   ** Loading
+   */
   loading: {
-    color: 'blue',
-    failedColor: 'red',
-    height: '5px',
+    color: "turquoise",
+    failedColor: "red",
+    height: "5px",
     duration: 5000
   },
   /*
-  ** For a custom loading component loading: '~/components/loading.vue'
-  */
+   ** For a custom loading component loading: '~/components/loading.vue'
+   */
   /*
-  ** Add transitionios between pages
-  */
+   ** Add transitionios between pages
+   */
   transition: {
-    name: 'component-fade',
-    mode: 'out-in'
+    name: "component-fade",
+    mode: "out-in"
   },
   /*
-  ** Add axios globally
-  */
+   ** Add axios globally
+   */
   build: {
-    vendor: ['axios']
+    vendor: ["axios"]
     /*
-    ** Run ESLINT on save
-    */
+     ** Run ESLINT on save
+     */
     // extend(config, ctx) {
     //   if (ctx.isClient) {
     //     config.module.rules.push({

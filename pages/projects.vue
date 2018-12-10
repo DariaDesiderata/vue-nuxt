@@ -87,13 +87,6 @@ export default {
 }
 
 .section__img {
-  /*background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    hsla(339, 6%, 46%, 0.3) 5px,
-    hsla(339, 6%, 46%, 0.3) 11px
-  );*/
   border: 1px solid hsla(339, 6%, 46%, 0.3);
   z-index: 5;
   position: relative;
@@ -107,11 +100,6 @@ export default {
   width: 90%;
   display: block;
   margin: 5% auto;
-  /*transition: transform 0.35s;
-	-webkit-transform: translate3d(-30px,0,0) scale(1.12);
-	transform: translate3d(-30px,0,0) scale(1.12);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;*/
 }
 .section__img:hover img {
   filter: none;
@@ -120,7 +108,7 @@ export default {
 }
 
 .section__project_id {
-  font-size: 70px;
+  font-size: 80px;
 }
 .section__more {
   font-family: "Alegreya Sans";
@@ -151,8 +139,9 @@ export default {
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
   main {
-    background-image: url("../static/assets/bw_opacity10.jpg");
-    background-size: cover;
+    background: url("../static/assets/Stroke-5.png") no-repeat center center
+      fixed;
+    background-size: 90%;
     height: 100vh;
     display: grid;
     grid-template-rows: 10% 90%;
@@ -162,15 +151,16 @@ export default {
     grid-area: header-nav;
   }
   .section {
-    height: 100%;
+    height: 95%;
     grid-area: section;
     display: grid;
-    grid-template-columns: 40% 10% 30% 10% 10%;
+    grid-template-columns: 40% 10% 30% 10% auto;
     grid-template-rows: 10% 25% 50% auto;
     grid-template-areas:
       ". . . ."
       ". slide-image slide-image slide-image"
-      "slide-content  slide-image slide-image slide-image";
+      "slide-content  slide-image slide-image slide-image"
+      ". . . section-id";
   }
   .section__content {
     padding-left: 50px;
@@ -192,6 +182,7 @@ export default {
     overflow: hidden;
   }
   .section__project_id {
+    margin-left: 200px;
     grid-area: section-id;
   }
   .section__more {

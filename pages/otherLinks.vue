@@ -3,15 +3,7 @@
     <main class="landing">
       <div class="landing-inner">
         <top-nav/>
-        <ul>
-          <li><a href="#">Link here</a><p>Lorem ipsum dolor amet raw denim VHS biodiesel beard meditation. Thundercats photo booth pickled offal. Leggings taiyaki organic, unicorn aesthetic seitan gluten-free cray tilde poke quinoa gastropub pabst. Raw denim waistcoat farm-to-table fam ethical trust fund banjo bicycle rights selvage heirloom hexagon chambray glossier forage succulents. Live-edge activated charcoal post-ironic 90's</p></li>
-          <li><a href="#">Link here</a><p>Lorem ipsum dolor amet raw denim VHS biodiesel beard meditation. Thundercats photo booth pickled offal. Leggings taiyaki organic, unicorn aesthetic seitan gluten-free cray tilde poke quinoa gastropub pabst. Raw denim waistcoat farm-to-table fam ethical trust fund banjo bicycle rights selvage heirloom hexagon chambray glossier forage succulents. Live-edge activated charcoal post-ironic 90's</p></li>
-          <li><a href="#">Link here</a><p>Lorem ipsum dolor amet raw denim VHS biodiesel beard meditation. Thundercats photo booth pickled offal. Leggings taiyaki organic, unicorn aesthetic seitan gluten-free cray tilde poke quinoa gastropub pabst. Raw denim waistcoat farm-to-table fam ethical trust fund banjo bicycle rights selvage heirloom hexagon chambray glossier forage succulents. Live-edge activated charcoal post-ironic 90's</p></li>
-          <li><a href="#">Link here</a><p>Lorem ipsum dolor amet raw denim VHS biodiesel beard meditation. Thundercats photo booth pickled offal. Leggings taiyaki organic, unicorn aesthetic seitan gluten-free cray tilde poke quinoa gastropub pabst. Raw denim waistcoat farm-to-table fam ethical trust fund banjo bicycle rights selvage heirloom hexagon chambray glossier forage succulents. Live-edge activated charcoal post-ironic 90's</p></li>
-          <li><a href="#">Link here</a><p>Lorem ipsum dolor amet raw denim VHS biodiesel beard meditation. Thundercats photo booth pickled offal. Leggings taiyaki organic, unicorn aesthetic seitan gluten-free cray tilde poke quinoa gastropub pabst. Raw denim waistcoat farm-to-table fam ethical trust fund banjo bicycle rights selvage heirloom hexagon chambray glossier forage succulents. Live-edge activated charcoal post-ironic 90's</p></li>
-          <li><a href="#">Link here</a><p>Lorem ipsum dolor amet raw denim VHS biodiesel beard meditation. Thundercats photo booth pickled offal. Leggings taiyaki organic, unicorn aesthetic seitan gluten-free cray tilde poke quinoa gastropub pabst. Raw denim waistcoat farm-to-table fam ethical trust fund banjo bicycle rights selvage heirloom hexagon chambray glossier forage succulents. Live-edge activated charcoal post-ironic 90's</p></li>
-          <li><a href="#">Link here</a><p>Lorem ipsum dolor amet raw denim VHS biodiesel beard meditation. Thundercats photo booth pickled offal. Leggings taiyaki organic, unicorn aesthetic seitan gluten-free cray tilde poke quinoa gastropub pabst. Raw denim waistcoat farm-to-table fam ethical trust fund banjo bicycle rights selvage heirloom hexagon chambray glossier forage succulents. Live-edge activated charcoal post-ironic 90's</p></li>
-        </ul>
+         <p> Section coming soon </p> 
       </div>
     </main>
   </section>
@@ -28,7 +20,7 @@ export default {
 
 <style scoped>
 .landing {
-  background: url("../static/assets/bw_opacity10.jpg") no-repeat center center
+  background: url("../static/assets/Background-1.png") no-repeat center center
     fixed;
   background-size: 100%;
 }

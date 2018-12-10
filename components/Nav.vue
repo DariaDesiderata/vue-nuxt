@@ -4,7 +4,7 @@
     <li> / <li>
     <li><nuxt-link to="/projects">Projects</nuxt-link></li>
     <li> / <li>
-    <li><nuxt-link to="/links">Links </nuxt-link></li>
+    <li><nuxt-link to="/otherLinks">Links </nuxt-link></li>
     <li> / <li>
     <li><nuxt-link to="/about">Collaborate </nuxt-link></li>
   </ul>

@@ -31,11 +31,15 @@ export default {
 
 <style scoped>
 .landing {
-  background: url("../static/assets/about_me.jpg") no-repeat center center fixed;
+  background: url("../static/assets/Stroke-7.png") no-repeat center center fixed;
+  background-size: 90%;
 }
 .about {
-  margin: 50px auto;
-  min-width: calc(80% - 100px);
+  height: 532px;
+  margin: 10% auto;
+  padding: 20px 100px;
+  line-height: 32px;
+  min-width: calc(60% - 100px);
   color: hsla(339, 6%, 46%, 0.93);
 }
 </style>

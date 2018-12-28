@@ -17,7 +17,7 @@ $beau: "Beau", sans-serif;
 
 .mainNav {
   font-family: $beau;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   list-style: none;
   text-align: center;
   display: flex;
@@ -29,10 +29,10 @@ a {
   margin: 5px 10px;
   transition: color 0.3s ease;
   text-decoration: none;
-  color: hsla(230, 10%, 12%, 0.7);
+  color: #1c1d22;
 }
 
 a:hover {
-  color: hsla(308, 52%, 59%, 1);
+  color: #cd60be;
 }
 </style>

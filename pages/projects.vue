@@ -69,7 +69,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .section__title {
   font-size: 45px;
   margin: 0;
@@ -137,56 +137,54 @@ export default {
 .section__more-link:hover {
   color: hsla(308, 52%, 59%, 0.9);
 }
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-  main {
-    background: url("../static/assets/img/Stroke-5.png") no-repeat center center
-      fixed;
-    background-size: 90%;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 10% 90%;
-    grid-template-areas: "header-nav" "section";
-  }
-  .nav {
-    grid-area: header-nav;
-  }
-  .section {
-    height: 95%;
-    grid-area: section;
-    display: grid;
-    grid-template-columns: 40% 10% 30% 10% auto;
-    grid-template-rows: 10% 25% 50% auto;
-    grid-template-areas:
-      ". . . ."
-      ". slide-image slide-image slide-image"
-      "slide-content  slide-image slide-image slide-image"
-      ". . . section-id";
-  }
-  .section__content {
-    padding-left: 50px;
-    width: 120%;
-    grid-area: slide-content;
-    z-index: 50;
-  }
-  .section__description-text {
-    font-family: "Alegreya Sans";
-    line-height: 1.5em;
-    letter-spacing: 1.5px;
-    background-color: hsla(13, 100%, 95%, 0.81);
-    padding: 20px 0 20px 20px;
-  }
+main {
+  background: url("../static/assets/img/Stroke-5.png") no-repeat center center
+    fixed;
+  background-size: 90%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "header-nav" "section";
+}
+.nav {
+  grid-area: header-nav;
+}
+.section {
+  height: 95%;
+  grid-area: section;
+  display: grid;
+  grid-template-columns: 40% 10% 30% 10% auto;
+  grid-template-rows: 10% 25% 50% auto;
+  grid-template-areas:
+    ". . . ."
+    ". slide-image slide-image slide-image"
+    "slide-content  slide-image slide-image slide-image"
+    ". . . section-id";
+}
+.section__content {
+  padding-left: 50px;
+  width: 120%;
+  grid-area: slide-content;
+  z-index: 50;
+}
+.section__description-text {
+  font-family: "Alegreya Sans";
+  line-height: 1.5em;
+  letter-spacing: 1.5px;
+  background-color: hsla(13, 100%, 95%, 0.81);
+  padding: 20px 0 20px 20px;
+}
 
-  .section__img {
-    height: auto;
-    grid-area: slide-image;
-    overflow: hidden;
-  }
-  .section__project_id {
-    margin-left: 200px;
-    grid-area: section-id;
-  }
-  .section__more {
-    grid-area: more;
-  }
+.section__img {
+  height: auto;
+  grid-area: slide-image;
+  overflow: hidden;
+}
+.section__project_id {
+  margin-left: 200px;
+  grid-area: section-id;
+}
+.section__more {
+  grid-area: more;
 }
 </style>

@@ -4,31 +4,7 @@
       <div class="landing-inner">
         <top-nav/>
           <bio></bio>
-          <icon-base 
-            width="80"
-            height="80"
-            icon-name="github"
-            >
-            <icon-github/>
-          </icon-base>
-          <icon-base 
-            width="80"
-            height="80"
-            icon-name="linkedin">
-            <icon-linkedin/>
-          </icon-base>
-          <icon-base 
-            width="80"
-            height="80"
-            icon-name="gmail">
-              <icon-gmail/>
-          </icon-base>
-          <icon-base 
-            width="80"
-            height="80"
-            icon-name="instagram">
-            <icon-instagram/>
-          </icon-base>
+          <icon-section></icon-section>
         </div>
     </main>
   </section>
@@ -36,13 +12,14 @@
 
 <script>
 import TopNav from "~/components/Nav.vue";
-import * as Icons from "~/components/icons";
 import Bio from "~/components/Bio";
+import { IconSection } from "~/components/icons";
+
 export default {
   components: {
     TopNav,
     Bio,
-    ...Icons
+    IconSection
   }
 };
 </script>
@@ -53,6 +30,7 @@ export default {
     fixed;
   background-size: 90%;
 }
+
 .about {
   height: 532px;
   margin: 10% auto;

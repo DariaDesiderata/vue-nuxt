@@ -26,7 +26,7 @@ export default {};
 @import url("../static/assets/css/fonts.scss");
 $beau: "Beau", sans-serif;
 .bio {
-  margin: 5% 15%;
+  margin: 5% 15% 2%;
   font-family: $beau;
   overflow: scroll;
 }
@@ -38,7 +38,6 @@ $beau: "Beau", sans-serif;
 .bio__tagline-italic {
   font-size: 40px;
   font-style: italic;
-  letter-spacing: 2px;
 }
 .bio__main {
   font-size: 20px;
@@ -54,6 +53,6 @@ $beau: "Beau", sans-serif;
   margin-left: 30%;
   font-size: 20px;
   line-height: 1.2em;
+  color: #fff;
 }
 </style>
->

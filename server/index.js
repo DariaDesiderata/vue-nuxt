@@ -1,9 +1,9 @@
 import express from "express";
 import { Nuxt, Builder } from "nuxt";
-
 import api from "./api";
 
 const app = express();
+app.use(express.json());
 const host = process.env.HOST || "0.0.0.0";
 const port = process.env.PORT || 3000;
 

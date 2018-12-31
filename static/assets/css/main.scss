@@ -36,6 +36,7 @@ footer {
   height: calc(100vh - 60px);
   margin: 25px;
   border: 4px dotted hsla(339, 6%, 46%, 0.3);
+  overflow: scroll;
 }
 .logo {
   width: 100%;

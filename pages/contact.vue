@@ -4,25 +4,23 @@
         <div class="landing-inner contact">
         <top-nav/>
           <h1 class="contact__header">
-            <span class='contact__header-italic'>D</span>rop me a line
+            <span class='contact__header-italic'>G</span>et in <span class='contact__header-italic'>t</span>ouch
           </h1>
-          <div class="contact__body">
-            <form class="contact__form" name="contact" action="/thank-you"  method="post">
-              <label class="contact__form-label" for="name">
-                Name:
-              </label>
-              <input class="contact__form-field" name="name" id="name" />
-              <label class="contact__form-label" for="email">
-                Email:
-              </label>
-              <input class="contact__form-field" name="email" id="email" />
-              <label class="contact__form-label" for="message">
-                Message:
-              </label>
-              <textarea class="contact__form-field" name="message" id="message"></textarea>
-              <input class="form-button" type="submit" value="Send message" />
-            </form>
-          </div>
+          <form class="contact__form" name="contact" action="/contact"  method="post">
+            <label class="contact__form-label" for="name">
+              Name:
+            </label>
+            <input class="contact__form-field" name="name" id="name" />
+            <label class="contact__form-label" for="email">
+              Email:
+            </label>
+            <input class="contact__form-field" name="email" id="email" />
+            <label class="contact__form-label" for="message">
+              Message:
+            </label>
+            <textarea class="contact__form-field" name="message" id="message"></textarea>
+            <input class="form-button" type="submit" value="This will eventually send a message" />
+          </form>
       </div>
     </main>
   </section>
@@ -45,7 +43,7 @@ $beau: "Beau", sans-serif;
 }
 .contact__header {
   margin: 15px auto;
-  font-size: 30px;
+  font-size: 35px;
   letter-spacing: 2px;
   font-weight: 400;
 }
@@ -58,11 +56,10 @@ $beau: "Beau", sans-serif;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-}
-.contact__form {
   height: 350px;
   margin: 2% 25%;
-  border: 1px solid hsla(339, 6%, 46%, 0.3);
+  background: hsla(339, 6%, 77%, 0.32);
+  box-shadow: 5px 5px 25px hsla(339, 6%, 46%, 0.3);
   border-radius: 4px;
 }
 .contact__form-field {
@@ -76,5 +73,10 @@ $beau: "Beau", sans-serif;
 }
 .contact__form-label {
   text-align: left;
+}
+.landing {
+  background: url("../static/assets/bw_opacity10.jpg") no-repeat center center
+    fixed;
+  background-size: 90%;
 }
 </style>

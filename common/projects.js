@@ -9,7 +9,7 @@ const projects = [
       Working on this project allowed me to learn various aspects of WebGL, manipulating objects\
       on Canvas and mapping data to visual display of objects.",
     imgUrl: "./assets/wanderers_logo.png",
-    projectUrl: "https://github.com/DariaDesiderata/wanderers"
+    projectUrl: "https://wanderers-interactive.com/"
   },
   {
     id: 2,
